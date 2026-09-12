@@ -2,10 +2,9 @@
 
 import type { ReactNode } from "react"
 import Link from "next/link"
-import { ArrowRight } from "lucide-react"
 import { Logo } from "@/components/logo"
 import { MediaFrame } from "@/components/media-frame"
-import { Button, buttonVariants } from "@/components/ui/button"
+import { QuoteChip } from "@/components/quote-chip"
 import { cn } from "@/lib/utils"
 
 const NAV = [
@@ -50,7 +49,7 @@ export default function StyleGuidePage() {
             href="/"
             className="t-caption transition-colors duration-[var(--duration-ui)] hover:text-ink"
           >
-            Homepage skeleton
+            Back to site
           </Link>
         </div>
       </header>
@@ -84,8 +83,8 @@ export default function StyleGuidePage() {
 
           <Rule id="color" title="Color">
             <p className="t-caption mb-8 max-w-copy">
-              Four-level contrast. One accent. Navy is reserved for the closing
-              band.
+              Four-level contrast. One accent. Navy is the conversion control
+              and the closing band. Dawn Blue is not a button color.
             </p>
             <div className="grid grid-cols-2 gap-3 sm:grid-cols-5">
               {COLORS.map((color) => (
@@ -161,38 +160,22 @@ export default function StyleGuidePage() {
 
           <Rule id="buttons" title="Buttons">
             <p className="t-caption mb-8 max-w-copy">
-              44px conversion height. 8px radius. Press scale 0.97. Arrow moves
-              4px. No glow.
+              One control. Navy pill, 44px, circle arrow. White on dark bands.
+              Press scale 0.97.
             </p>
             <div className="flex flex-wrap items-center gap-3">
-              <Button>
-                Get a Quote
-                <ArrowRight className="size-4 transition-transform duration-[var(--duration-ui)] ease-[var(--ease-out)] group-hover/button:translate-x-1" />
-              </Button>
-              <Button variant="outline">Explore Services</Button>
-              <Button variant="ghost">Ghost</Button>
-              <Button variant="navy">On canvas</Button>
-              <Button disabled>Disabled</Button>
+              <QuoteChip href="#buttons">Get a Quote</QuoteChip>
+              <QuoteChip disabled>Sending</QuoteChip>
             </div>
-            <div className="mt-6 flex flex-wrap items-center gap-3">
-              <Button size="sm">Small</Button>
-              <Button size="default">Default</Button>
-              <Button size="cta">CTA</Button>
-            </div>
-            <div className="mt-8 rounded-[var(--radius-image)] bg-navy p-8">
-              <Button>
-                Request a Quote
-                <ArrowRight className="size-4 transition-transform duration-[var(--duration-ui)] ease-[var(--ease-out)] group-hover/button:translate-x-1" />
-              </Button>
-              <Link
-                href="#buttons"
-                className={cn(
-                  buttonVariants({ variant: "outline", size: "cta" }),
-                  "ml-3 border-white/15 bg-transparent text-white hover:border-white/25 hover:bg-white/5"
-                )}
-              >
-                Contact
-              </Link>
+            <div className="mt-8 rounded-[var(--radius-frame)] bg-navy p-8">
+              <div className="flex flex-wrap items-center gap-3">
+                <QuoteChip href="#buttons" tone="white">
+                  Request a Quote
+                </QuoteChip>
+                <QuoteChip href="#buttons" tone="white">
+                  WhatsApp the team
+                </QuoteChip>
+              </div>
             </div>
           </Rule>
 
@@ -201,7 +184,7 @@ export default function StyleGuidePage() {
               Compact on scroll. Translucent material. Quote remains the only
               filled control.
             </p>
-            <div className="overflow-hidden rounded-[var(--radius-image)] border border-hairline bg-white">
+            <div className="overflow-hidden rounded-[var(--radius-frame)] border border-hairline bg-white">
               <div className="flex h-16 items-center justify-between px-5">
                 <Logo href="/style-guide" />
                 <div className="hidden items-center gap-6 sm:flex">
@@ -214,11 +197,9 @@ export default function StyleGuidePage() {
                     </span>
                   ))}
                 </div>
-                <span
-                  className={cn(buttonVariants({ size: "cta" }), "pointer-events-none")}
-                >
+                <QuoteChip href="/contact" className="pointer-events-none">
                   Get a Quote
-                </span>
+                </QuoteChip>
               </div>
               <div className="flex h-14 items-center justify-between border-t border-hairline bg-canvas/80 px-5">
                 <Logo href="/style-guide" />
@@ -276,13 +257,15 @@ export default function StyleGuidePage() {
 
           <Rule id="radius" title="Radius">
             <p className="t-caption mb-8 max-w-copy">
-              6 / 8 / 12. Stop there.
+              Chrome 6 / 8 / 12. Frames 24. Conversion chips are fully round.
             </p>
-            <div className="flex gap-6">
+            <div className="flex flex-wrap items-end gap-6">
               {[
                 ["sm", "6px", "rounded-sm"],
                 ["md", "8px", "rounded-md"],
                 ["lg", "12px", "rounded-lg"],
+                ["frame", "24px", "rounded-[24px]"],
+                ["chip", "pill", "rounded-full"],
               ].map(([name, value, radius]) => (
                 <div key={name} className="text-center">
                   <div className={cn("size-16 bg-navy", radius)} />
@@ -329,10 +312,9 @@ export default function StyleGuidePage() {
               <li>Press scale 0.97 on pointer-down</li>
               <li>No parallax or image reveal until the hero pass</li>
             </ul>
-            <Button className="mt-8">
+            <QuoteChip href="#motion" className="mt-8">
               Press me
-              <ArrowRight className="size-4 transition-transform duration-[var(--duration-ui)] ease-[var(--ease-out)] group-hover/button:translate-x-1" />
-            </Button>
+            </QuoteChip>
           </Rule>
         </main>
       </div>

@@ -1,5 +1,6 @@
 import type { Metadata } from "next"
 import { Geist, Geist_Mono } from "next/font/google"
+import { site } from "@/lib/site"
 import "./globals.css"
 
 const geistSans = Geist({
@@ -43,8 +44,8 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
               "@type": "LocalBusiness",
               name: "Dawn Cleaners",
               url: "https://dawncleaners.com",
-              email: "hello@dawncleaners.com",
-              telephone: "+263772124480",
+              email: site.contact.email,
+              telephone: site.contact.phoneHref.replace("tel:", ""),
               address: {
                 "@type": "PostalAddress",
                 addressLocality: "Harare",

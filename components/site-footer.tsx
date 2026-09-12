@@ -65,7 +65,7 @@ export function SiteFooter() {
         </div>
       </Container>
 
-      <Container className="mt-12 flex flex-wrap items-center justify-between gap-3 border-t border-hairline pt-6">
+      <Container width="frame" className="mt-12 flex flex-wrap items-center justify-between gap-3 border-t border-hairline pt-6">
         <p className="t-caption">© 2026 Dawn Cleaners. All rights reserved.</p>
         <p className="t-caption">{site.contact.region}</p>
       </Container>

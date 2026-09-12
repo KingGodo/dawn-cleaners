@@ -8,7 +8,6 @@ import { Menu, X } from "lucide-react"
 import { Logo } from "@/components/logo"
 import { Container } from "@/components/container"
 import { QuoteChip } from "@/components/quote-chip"
-import { buttonVariants } from "@/components/ui/button"
 import { duration, springCalm } from "@/lib/animations"
 import { site } from "@/lib/site"
 import { cn } from "@/lib/utils"
@@ -18,6 +17,7 @@ export function Navbar() {
   const [compact, setCompact] = useState(false)
   const [open, setOpen] = useState(false)
   const reduceMotion = useReducedMotion()
+  const overHero = pathname === "/" && !compact && !open
 
   useEffect(() => {
     const onScroll = () => setCompact(window.scrollY > 8)
@@ -36,14 +36,16 @@ export function Navbar() {
   return (
     <header
       className={cn(
-        "sticky top-0 z-50 bg-canvas transition-[height,box-shadow,backdrop-filter] duration-[var(--duration-ui)] ease-[var(--ease-out)]",
-        compact
-          ? "h-14 shadow-[inset_0_-1px_0_var(--hairline)]"
-          : "h-16"
+        "sticky top-0 z-50 transition-[height,background-color,box-shadow,backdrop-filter] duration-[var(--duration-ui)] ease-[var(--ease-out)]",
+        overHero
+          ? "h-16 bg-transparent"
+          : compact
+            ? "h-14 bg-canvas shadow-[inset_0_-1px_0_var(--hairline)]"
+            : "h-16 bg-canvas"
       )}
     >
       <Container width="frame" className="flex h-full items-center justify-between">
-        <Logo />
+        <Logo inverted={overHero} />
 
         <nav className="hidden items-center gap-8 lg:flex" aria-label="Primary">
           {site.nav.map((item) => (
@@ -52,10 +54,12 @@ export function Navbar() {
               href={item.href}
               className={cn(
                 "text-[13.5px] font-medium tracking-[-0.011em] transition-colors duration-[var(--duration-ui)] ease-[var(--ease-out)]",
-                pathname === item.href ||
-                  (item.href.startsWith("/#") && pathname === "/")
-                  ? "text-ink hover:text-ink"
-                  : "text-lead hover:text-ink"
+                overHero
+                  ? "text-white/80 hover:text-white"
+                  : pathname === item.href ||
+                      (item.href.startsWith("/#") && pathname === "/")
+                    ? "text-ink hover:text-ink"
+                    : "text-lead hover:text-ink"
               )}
             >
               {item.label}
@@ -64,13 +68,22 @@ export function Navbar() {
         </nav>
 
         <div className="flex items-center gap-2">
-          <QuoteChip href="/contact" className="hidden md:inline-flex">
+          <QuoteChip
+            href="/contact"
+            tone={overHero ? "white" : "navy"}
+            className="hidden md:inline-flex"
+          >
             Get a Quote
           </QuoteChip>
 
           <button
             type="button"
-            className="flex size-10 shrink-0 items-center justify-center rounded-md border border-hairline text-ink lg:hidden motion-safe:active:scale-[0.97]"
+            className={cn(
+              "flex size-10 shrink-0 items-center justify-center rounded-md lg:hidden motion-safe:active:scale-[0.97]",
+              overHero
+                ? "border border-white/30 text-white"
+                : "border border-hairline text-ink"
+            )}
             aria-label={open ? "Close menu" : "Open menu"}
             aria-expanded={open}
             onClick={() => setOpen((value) => !value)}
@@ -111,16 +124,9 @@ export function Navbar() {
                     {item.label}
                   </Link>
                 ))}
-                <Link
-                  href="/contact"
-                  onClick={() => setOpen(false)}
-                  className={cn(
-                    buttonVariants({ variant: "navy", size: "cta" }),
-                    "mt-6 rounded-full"
-                  )}
-                >
+                <QuoteChip href="/contact" className="mt-6" onClick={() => setOpen(false)}>
                   Get a Quote
-                </Link>
+                </QuoteChip>
               </nav>
             </motion.div>
           </>

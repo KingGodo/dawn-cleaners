@@ -15,16 +15,13 @@ export function CtaBand() {
             Tell us the property and how often you need us. We’ll come back with
             a clear scope, not a generic package.
           </p>
-          <div className="mt-8 flex flex-wrap items-center gap-4">
+          <div className="mt-8 flex flex-wrap items-center gap-3">
             <QuoteChip href="/contact" tone="white">
               Request a Quote
             </QuoteChip>
-            <a
-              href={site.contact.whatsapp}
-              className="text-[14px] font-medium tracking-[-0.011em] text-white/70 underline-offset-4 transition-opacity duration-[var(--duration-ui)] hover:text-white hover:underline"
-            >
+            <QuoteChip href={site.contact.whatsapp} tone="white">
               WhatsApp the team
-            </a>
+            </QuoteChip>
           </div>
         </div>
       </Container>

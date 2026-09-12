@@ -24,7 +24,7 @@ export function MediaFrame({
     <div
       className={cn(
         "group relative isolate overflow-hidden bg-mist",
-        radius === "image" ? "rounded-[var(--radius-image)]" : "rounded-none",
+        radius === "image" ? "rounded-[var(--radius-frame)]" : "rounded-none",
         className
       )}
       style={{ aspectRatio: ratio }}

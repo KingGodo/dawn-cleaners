@@ -1,14 +1,11 @@
 import type { Metadata } from "next"
-import Link from "next/link"
-import { ArrowRight } from "lucide-react"
 import { CtaBand } from "@/components/cta-band"
 import { Container } from "@/components/container"
 import { MediaFrame } from "@/components/media-frame"
 import { PageHero } from "@/components/page-hero"
+import { QuoteChip } from "@/components/quote-chip"
 import { SiteShell } from "@/components/site-shell"
-import { buttonVariants } from "@/components/ui/button"
 import { services } from "@/lib/site"
-import { cn } from "@/lib/utils"
 
 export const metadata: Metadata = {
   title: "Services",
@@ -27,12 +24,12 @@ export default function ServicesPage() {
       />
 
       <section className="site-section">
-        <Container className="space-y-20">
+        <Container width="frame" className="space-y-16">
           {services.map((service, index) => (
             <article
               key={service.slug}
               id={service.slug}
-              className="grid items-center gap-10 lg:grid-cols-2 lg:gap-16"
+              className="grid items-center gap-8 lg:grid-cols-2 lg:gap-12"
             >
               <MediaFrame
                 src={service.image}
@@ -49,19 +46,15 @@ export default function ServicesPage() {
                   {service.includes.map((item) => (
                     <li
                       key={item}
-                      className="border-t border-hairline pt-3 t-body"
+                      className="rounded-[var(--radius-frame)] bg-white px-5 py-4 shadow-[var(--inset-image)] t-body"
                     >
                       {item}
                     </li>
                   ))}
                 </ul>
-                <Link
-                  href="/contact"
-                  className={cn(buttonVariants({ size: "cta" }), "mt-8")}
-                >
-                  Request this service
-                  <ArrowRight className="size-4 transition-transform duration-[var(--duration-ui)] ease-[var(--ease-out)] group-hover/button:translate-x-1" />
-                </Link>
+                <div className="mt-8">
+                  <QuoteChip href="/contact">Request this service</QuoteChip>
+                </div>
               </div>
             </article>
           ))}

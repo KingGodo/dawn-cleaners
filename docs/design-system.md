@@ -35,13 +35,13 @@ Living specimens: `/style-guide`
 
 ## Color tokens
 
-Use blue only when it means something: primary action, focus, rare emphasis. Do not wash sections in blue.
+Use blue only when it means something: brand mark, rare emphasis. Do not wash sections in blue. Never use Dawn Blue on buttons.
 
 | Token | Value | Role |
 | --- | --- | --- |
-| `--primary` / Dawn Blue | `#155EEF` | Primary CTA, focus ring |
-| `--primary-hover` | `#0E4ED8` | Hover of primary |
-| `--navy` | `#0B1F3A` | Closing CTA band, structural dark |
+| `--primary` / Dawn Blue | `#155EEF` | Logo sun, rare emphasis |
+| `--primary-hover` | `#0E4ED8` | Hover of Dawn Blue, never buttons |
+| `--navy` | `#0B1F3A` | Conversion control, CTA band, structural dark |
 | `--mist` | `#EAF2FF` | Reserved media, rare wash |
 | `--canvas` / `--background` | `#F8FAFC` | Page ground |
 | `--card` | `#FFFFFF` | Raised surfaces |
@@ -109,15 +109,14 @@ Always pair with `--gutter`. Never full-bleed type.
 
 ## Buttons
 
-Primary CTA is visually dominant through contrast and placement, not size.
+One conversion control everywhere: the quote chip (`QuoteChip`). No second button family.
 
-- Height: 44px (`cta`) for conversion actions. 40px default. 36px small.
-- Radius: 8px (`--radius-md`).
-- Primary: Dawn Blue, white type. Hover: `#0E4ED8`. Arrow shifts 4px.
-- Outline: hairline border, no fill. Hover: white surface, slightly stronger border.
-- Navy: only on dark bands when a second solid is needed.
-- Press: `scale(0.97)` on pointer-down. Instant.
-- No glow. No pill shape. No gradient.
+- Navy pill, 44px tall, label plus a circular arrow. White pill on navy bands.
+- Hover: mix 8% white into navy. Arrow shifts 2px.
+- Press: `scale(0.97)` on pointer-down.
+- Disabled: 40% opacity, no pointer events.
+- Hamburger and industry tabs are not conversion controls. Do not restyle them as chips.
+- No Dawn Blue rectangles. No outline or ghost CTAs. No mixed radii.
 
 ---
 
@@ -151,11 +150,12 @@ Soft-minimal. One system.
 
 | Token | Value | Use |
 | --- | --- | --- |
-| `--radius-sm` | 6px | Chips, tight controls |
-| `--radius-md` / `--radius` | 8px | Buttons, inputs |
-| `--radius-lg` / `--radius-image` | 12px | Images, large surfaces |
+| `--radius-sm` | 6px | Tight chrome |
+| `--radius-md` / `--radius` | 8px | Inputs, hamburger |
+| `--radius-lg` / `--radius-image` | 12px | Smaller surfaces |
+| `--radius-frame` | 24px | Photos, cards, hero frame |
 
-Do not use 16px+ on chrome. Do not mix pills with this system.
+Conversion chips are fully rounded (`rounded-full`). Do not mix 8px rectangles with those chips.
 
 ---
 

@@ -1,4 +1,5 @@
 import Link from "next/link"
+import { LogoMark } from "@/components/logo-mark"
 import { cn } from "@/lib/utils"
 
 export function Logo({
@@ -14,17 +15,27 @@ export function Logo({
     <Link
       href={href}
       className={cn(
-        "inline-flex items-baseline gap-1.5 text-[15px] font-semibold tracking-[-0.02em]",
+        "inline-flex items-center gap-2.5",
         "transition-opacity duration-[var(--duration-ui)] ease-[var(--ease-out)] hover:opacity-70",
-        inverted ? "text-white" : "text-ink",
         className
       )}
     >
-      <span>Dawn</span>
+      <LogoMark inverted={inverted} />
       <span
-        className={cn("font-medium", inverted ? "text-white/70" : "text-slate")}
+        className={cn(
+          "inline-flex items-baseline gap-1.5 text-[15px] font-semibold tracking-[-0.02em]",
+          inverted ? "text-white" : "text-ink"
+        )}
       >
-        Cleaners
+        <span>Dawn</span>
+        <span
+          className={cn(
+            "font-medium",
+            inverted ? "text-white/70" : "text-slate"
+          )}
+        >
+          Cleaners
+        </span>
       </span>
     </Link>
   )

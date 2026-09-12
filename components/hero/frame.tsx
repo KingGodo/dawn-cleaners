@@ -25,25 +25,21 @@ export function HeroFrame({
   useHeroMotion(sectionRef, frameRef, mediaRef)
 
   return (
-    <section ref={sectionRef} className="relative pt-3 sm:pt-4">
-      <div className="mx-auto w-full max-w-frame site-gutter">
-        <div className="relative">
-          <div
-            ref={frameRef}
-            className="relative h-[min(78vh,46rem)] min-h-[32rem] overflow-hidden rounded-[var(--radius-frame)] bg-navy sm:min-h-[36rem]"
-          >
-            <div
-              ref={mediaRef}
-              className="absolute inset-0 origin-center will-change-transform"
-            >
-              {media}
-            </div>
-            {overlay}
-            {children}
-            {stills}
-            {offer}
-          </div>
+    <section ref={sectionRef} className="relative -mt-16">
+      <div
+        ref={frameRef}
+        className="relative h-[100svh] min-h-[36rem] overflow-hidden bg-navy"
+      >
+        <div
+          ref={mediaRef}
+          className="absolute inset-0 origin-center will-change-transform"
+        >
+          {media}
         </div>
+        {overlay}
+        {children}
+        {stills}
+        {offer}
       </div>
     </section>
   )

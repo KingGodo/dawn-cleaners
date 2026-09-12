@@ -1,7 +1,7 @@
 "use client"
 
 import { useState, type FormEvent } from "react"
-import { Button } from "@/components/ui/button"
+import { QuoteChip } from "@/components/quote-chip"
 import { Field, SelectInput, TextArea, TextInput } from "@/components/ui/field"
 import { propertyTypes, serviceTypes } from "@/lib/site"
 
@@ -21,7 +21,7 @@ export function QuoteForm() {
 
   if (status === "sent") {
     return (
-      <div className="rounded-[var(--radius-image)] border border-hairline bg-white px-6 py-10">
+      <div className="rounded-[var(--radius-frame)] bg-white px-6 py-10 shadow-[var(--inset-image)] sm:px-8">
         <p className="t-eyebrow">Request received</p>
         <h2 className="t-h3 mt-4">Thank you. We’ll come back with a clear scope.</h2>
         <p className="t-body mt-3 max-w-[36ch]">
@@ -93,9 +93,9 @@ export function QuoteForm() {
       >
         <TextArea id="message" name="message" required />
       </Field>
-      <Button type="submit" disabled={status === "sending"} className="w-fit">
-        {status === "sending" ? "Sending…" : "Request a Quote"}
-      </Button>
+      <QuoteChip type="submit" disabled={status === "sending"}>
+        {status === "sending" ? "Sending" : "Request a Quote"}
+      </QuoteChip>
     </form>
   )
 }

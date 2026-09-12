@@ -19,10 +19,14 @@ export default function AboutPage() {
         eyebrow="About Dawn Cleaners"
         title="A cleaning company built like a hospitality team."
         lead="We started Dawn Cleaners because too many properties were paying for hours, not a standard. The work should hold up when a guest, a client, or your family walks in."
+        action={{ href: "/contact", label: "Get a Quote" }}
       />
 
       <section className="site-section">
-        <Container className="grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
+        <Container
+          width="frame"
+          className="grid items-center gap-10 lg:grid-cols-2 lg:gap-12"
+        >
           <MediaFrame
             src={photos.linens}
             alt="Crisp bed linen, the kind of finish guests notice first"
@@ -45,12 +49,15 @@ export default function AboutPage() {
         </Container>
       </section>
 
-      <section className="site-section border-t border-hairline">
-        <Container>
+      <section className="site-section pt-0">
+        <Container width="frame">
           <h2 className="t-h2 max-w-[16ch]">How we work.</h2>
-          <div className="mt-12 grid gap-10 sm:grid-cols-2">
+          <div className="mt-10 grid gap-4 sm:grid-cols-2">
             {principles.map((item) => (
-              <article key={item.title} className="border-t border-hairline pt-5">
+              <article
+                key={item.title}
+                className="rounded-[var(--radius-frame)] bg-white p-6 shadow-[var(--inset-image)] sm:p-8"
+              >
                 <h3 className="t-h3">{item.title}</h3>
                 <p className="t-caption mt-3">{item.copy}</p>
               </article>
@@ -59,8 +66,8 @@ export default function AboutPage() {
         </Container>
       </section>
 
-      <section className="site-section border-t border-hairline">
-        <Container className="grid gap-10 lg:grid-cols-2">
+      <section className="site-section pt-0">
+        <Container width="frame" className="grid gap-4 lg:grid-cols-2">
           <MediaFrame
             src={photos.kitchen}
             alt="A kitchen after a thorough clean"

@@ -1,5 +1,4 @@
 import Link from "next/link"
-import { ArrowRight } from "lucide-react"
 import { Container } from "@/components/container"
 import { MediaFrame } from "@/components/media-frame"
 import { QuoteChip } from "@/components/quote-chip"
@@ -36,10 +35,6 @@ export function ServicesSection() {
               <p className="t-eyebrow mt-5">{featured.eyebrow}</p>
               <h3 className="t-h3 mt-2">{featured.name}</h3>
               <p className="t-body mt-2 max-w-[36ch]">{featured.intent}</p>
-              <span className="mt-4 inline-flex items-center gap-2 text-[14px] font-medium tracking-[-0.011em] text-ink">
-                View services
-                <ArrowRight className="size-4 transition-transform duration-[var(--duration-ui)] ease-[var(--ease-out)] group-hover:translate-x-1" />
-              </span>
             </Link>
           </Reveal>
 
