@@ -1,3 +1,4 @@
+import Image from "next/image"
 import { Container } from "@/components/container"
 import { Reveal } from "@/components/reveal"
 import { SplitHeader } from "@/components/split-header"
@@ -15,15 +16,25 @@ function TestimonialCard({
   name,
   role,
   context,
+  image,
 }: (typeof testimonials)[number]) {
   return (
     <blockquote className="rounded-[var(--radius-frame)] bg-white p-6 shadow-[var(--inset-image)] sm:p-8">
       <p className="t-body text-ink">“{quote}”</p>
-      <footer className="mt-5">
-        <p className="t-label">{name}</p>
-        <p className="t-caption">
-          {role}, {context}
-        </p>
+      <footer className="mt-5 flex items-center gap-3">
+        <Image
+          src={image}
+          alt={name}
+          width={44}
+          height={44}
+          className="size-11 shrink-0 rounded-full object-cover ring-1 ring-ink/10"
+        />
+        <div className="min-w-0">
+          <p className="t-label">{name}</p>
+          <p className="t-caption">
+            {role}, {context}
+          </p>
+        </div>
       </footer>
     </blockquote>
   )
@@ -72,7 +83,7 @@ export function TestimonialsSection() {
           <SplitHeader
             eyebrow="Testimonials"
             heading="Quiet confidence from the people we work with."
-            body="Homes, offices and hospitality properties. The same finish, said in their own words."
+            body="Homes, offices and hospitality properties across Zimbabwe. The same finish, said in their own words."
           />
         </Reveal>
 

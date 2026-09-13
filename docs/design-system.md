@@ -63,14 +63,14 @@ Tracking is size-specific. Large type tightens; small type opens.
 
 | Style | Size | Weight | Tracking | Leading |
 | --- | --- | --- | --- | --- |
-| `t-display` | 42–84px fluid | 600 | `-0.03em` | 1.04 |
-| `t-h2` | 28–40px fluid | 600 | `-0.024em` | 1.15 |
-| `t-h3` | 20–24px | 600 | `-0.02em` | 1.3 |
-| `t-lead` | 17–19px | 400 | `-0.011em` | 1.6 |
-| `t-body` | 17px | 400 | `-0.006em` | 1.6 |
-| `t-caption` | 14px | 400 | `0` | 1.5 |
-| `t-label` | 13px | 500 | `0.01em` | 1.3 |
-| `t-eyebrow` | 12px | 500 | `0.14em` | 1 — uppercase |
+| `t-display` | 24–38px fluid | 600 | `-0.03em` | 1.12 |
+| `t-h2` | 22–30px fluid | 600 | `-0.02em` | 1.2 |
+| `t-h3` | 17–20px | 600 | `-0.02em` | 1.3 |
+| `t-lead` | 15px | 400 | `-0.011em` | 1.6 |
+| `t-body` | 14px | 400 | `-0.006em` | 1.6 |
+| `t-caption` | 12px | 400 | `0` | 1.5 |
+| `t-label` | 13px | 600 | `0` | 1.3 |
+| `t-eyebrow` | 11px | 600 | `0.18em` | 1 — uppercase |
 
 Display measure: roughly 11–18 characters. Body measure: ~40rem.
 

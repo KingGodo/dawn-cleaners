@@ -30,7 +30,7 @@ export function SplitHeader({
       </p>
       <div>
         <h2 className="t-h2 max-w-[22ch]">{heading}</h2>
-        {body ? <p className="t-lead mt-5 max-w-[48ch]">{body}</p> : null}
+        {body ? <p className="t-lead mt-3 max-w-[48ch]">{body}</p> : null}
         {action ? <div className="mt-7">{action}</div> : null}
       </div>
     </div>

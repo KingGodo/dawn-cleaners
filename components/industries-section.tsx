@@ -37,7 +37,7 @@ export function IndustriesSection() {
                     index === active ? "text-ink" : "text-slate hover:text-ink"
                   )}
                 >
-                  <span className="text-[clamp(1.75rem,1.2rem+1.6vw,2.75rem)] font-semibold tracking-[-0.03em]">
+                  <span className="text-[clamp(1.25rem,1.1rem+0.45vw,1.5rem)] font-semibold tracking-[-0.02em]">
                     {item.name}
                   </span>
                   <span className="t-caption hidden max-w-[22ch] sm:block">

@@ -60,7 +60,7 @@ export function PhotoStat({
       {hasCaption ? (
         <figcaption className="absolute inset-x-0 bottom-0 p-5 sm:p-6">
           {value ? (
-            <p className="text-[clamp(1.75rem,1.2rem+1.4vw,2.5rem)] font-semibold leading-none tracking-[-0.03em] text-white">
+            <p className="text-[clamp(1.35rem,1.15rem+0.5vw,1.75rem)] font-semibold leading-none tracking-[-0.03em] text-white">
               {value}
             </p>
           ) : null}

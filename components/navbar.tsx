@@ -60,7 +60,7 @@ export function Navbar() {
               key={item.href}
               href={item.href}
               className={cn(
-                "text-[13.5px] font-medium tracking-[-0.011em] transition-colors duration-[var(--duration-ui)] ease-[var(--ease-out)]",
+                "text-[13px] font-medium tracking-[-0.011em] transition-colors duration-[var(--duration-ui)] ease-[var(--ease-out)]",
                 overHero
                   ? "text-white/80 hover:text-white"
                   : pathname === item.href
@@ -128,7 +128,7 @@ export function Navbar() {
                     key={item.href}
                     href={item.href}
                     onClick={() => setOpen(false)}
-                    className="rounded-md px-2 py-3 text-[17px] font-medium tracking-[-0.02em] text-ink"
+                    className="rounded-md px-2 py-3 text-[15px] font-medium tracking-[-0.02em] text-ink"
                   >
                     {item.label}
                   </Link>

@@ -43,7 +43,7 @@ export function TrustSection() {
                 03
               </span>
               <div>
-                <p className="text-[clamp(3rem,2rem+3vw,4.5rem)] font-semibold leading-none tracking-[-0.04em] text-ink">
+                <p className="text-[clamp(1.85rem,1.4rem+1vw,2.25rem)] font-semibold leading-none tracking-[-0.03em] text-ink">
                   5
                 </p>
                 <p className="t-eyebrow mt-4">Spaces we serve</p>

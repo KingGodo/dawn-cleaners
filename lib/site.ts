@@ -256,66 +256,84 @@ export const processSteps = [
 export const testimonials = [
   {
     quote:
-      "Dawn Cleaners has made managing our property so much easier. The team is reliable and consistently leaves the space ready for our guests.",
+      "Dawn Cleaners has made managing our Avondale rooms so much easier. Guests from the airport walk into a space that already feels ready.",
     name: "Tendai Moyo",
     role: "Property manager",
-    context: "6 room BnB",
+    context: "Avondale, Harare",
+    image:
+      "https://images.unsplash.com/photo-1522529599102-193c0d76b5b6?auto=format&fit=crop&crop=faces&w=200&h=200&q=80",
   },
   {
     quote:
-      "Turnovers used to take the whole morning. They arrive on time, work quietly, and the rooms are ready for check in.",
+      "Turnovers in Nyanga used to take the whole morning. They arrive on time, work quietly, and the rooms are ready for check in.",
     name: "Rumbidzai Ncube",
     role: "Lodge manager",
-    context: "Guest lodge",
+    context: "Nyanga",
+    image:
+      "https://images.unsplash.com/photo-1531123897727-8f129e1688ce?auto=format&fit=crop&crop=faces&w=200&h=200&q=80",
   },
   {
     quote:
-      "We needed an office that still looks looked after on Fridays. They keep it that way without us having to chase anyone.",
-    name: "David Chirwa",
+      "Our Borrowdale office still looks looked after on a Friday. They keep it that way without us having to chase anyone.",
+    name: "Tafadzwa Chirwa",
     role: "Office administrator",
-    context: "Shared workplace",
+    context: "Borrowdale, Harare",
+    image:
+      "https://images.unsplash.com/photo-1566492031773-4f4e44671857?auto=format&fit=crop&crop=faces&w=200&h=200&q=80",
   },
   {
     quote:
-      "They treat the house with care. I come back to a home that feels settled, not like someone has just been through it.",
-    name: "Amina Patel",
+      "They treat the Mount Pleasant house with care. I come back to a home that feels settled, not like someone has just been through it.",
+    name: "Tsitsi Chikwanda",
     role: "Homeowner",
-    context: "Weekly residential",
+    context: "Mount Pleasant, Harare",
+    image:
+      "https://images.unsplash.com/photo-1573497019418-b400bb3ab074?auto=format&fit=crop&crop=faces&w=200&h=200&q=80",
   },
   {
     quote:
-      "Guests mention the rooms before they mention the view. That is the standard we were after, and they hold it.",
+      "At the Falls, guests mention the rooms before they mention the view. That is the standard we were after, and they hold it.",
     name: "Chiedza Dube",
     role: "Hotel supervisor",
-    context: "City hotel",
+    context: "Victoria Falls",
+    image:
+      "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&crop=faces&w=200&h=200&q=80",
   },
   {
     quote:
-      "We briefed them once. Every visit since has matched that first handover, including the bathrooms.",
+      "We briefed them once in Bulawayo. Every visit since has matched that first handover, including the bathrooms.",
     name: "Farai Nyathi",
     role: "Lodge owner",
-    context: "Weekend lodge",
+    context: "Bulawayo",
+    image:
+      "https://images.unsplash.com/photo-1531384441138-2736e62e0919?auto=format&fit=crop&crop=faces&w=200&h=200&q=80",
   },
   {
     quote:
-      "Same day resets used to be a scramble. Now the next guest walks into a room that already looks listed.",
+      "Same day resets in Belgravia used to be a scramble. Now the next guest walks into a room that already looks listed.",
     name: "Lindiwe Sibanda",
     role: "Host",
-    context: "Short stay apartment",
+    context: "Belgravia, Harare",
+    image:
+      "https://images.unsplash.com/photo-1611432579699-484f7990b127?auto=format&fit=crop&crop=faces&w=200&h=200&q=80",
   },
   {
     quote:
-      "The team is quiet, on time, and they leave the kitchen the way I wish I left it myself.",
-    name: "James Mutasa",
+      "The team is quiet, on time, and they leave our Highlands kitchen the way I wish I left it myself.",
+    name: "Kudakwashe Mutasa",
     role: "Homeowner",
-    context: "Fortnightly home care",
+    context: "Highlands, Harare",
+    image:
+      "https://images.unsplash.com/photo-1463453091185-61582044d556?auto=format&fit=crop&crop=faces&w=200&h=200&q=80",
   },
   {
     quote:
-      "Our clients notice the office now. Floors, washrooms, the kitchen. We stopped sending reminder messages.",
+      "Clients notice the Newlands office now. Floors, washrooms, the kitchen. We stopped sending reminder messages.",
     name: "Netsai Khupe",
     role: "Practice manager",
-    context: "Professional office",
+    context: "Newlands, Harare",
+    image:
+      "https://images.unsplash.com/photo-1573496358961-3c82861ab8f4?auto=format&fit=crop&crop=faces&w=200&h=200&q=80",
   },
 ] as const
 

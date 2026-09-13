@@ -8,7 +8,7 @@ export function HeroOffer() {
       <div className="flex flex-col gap-5 sm:gap-8 lg:flex-row lg:items-end lg:justify-between lg:gap-16">
         <div className="min-w-0">
           <HeroCaption />
-          <h1 className="mt-3 min-w-0 text-[clamp(1.6rem,7.4vw,4.5rem)] font-semibold uppercase leading-[0.92] tracking-[-0.045em] text-white sm:mt-4">
+          <h1 className="mt-3 min-w-0 text-[clamp(1.5rem,3.8vw,2.35rem)] font-semibold uppercase leading-[1.12] tracking-[-0.03em] text-white sm:mt-4">
             <span className="block md:whitespace-nowrap">Check in ready.</span>
             <span className="inline-flex items-center gap-2.5 md:whitespace-nowrap">
               Every time.
@@ -32,7 +32,7 @@ export function HeroOffer() {
               }
             >
               <dt className="sr-only">{stat.label}</dt>
-              <dd className="max-w-[12ch] text-[clamp(0.92rem,3.6vw,1.5rem)] font-semibold uppercase leading-[1.1] tracking-[-0.03em] text-white sm:max-w-[14ch]">
+              <dd className="max-w-[12ch] text-[clamp(0.9375rem,2vw,1.25rem)] font-semibold uppercase leading-[1.15] tracking-[-0.03em] text-white sm:max-w-[14ch]">
                 {stat.value}
               </dd>
               <p className="mt-1.5 text-[12px] leading-relaxed tracking-[-0.01em] text-white/60 sm:hidden">

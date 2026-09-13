@@ -20,7 +20,7 @@ export function PageHero({ eyebrow, title, lead, action }: PageHeroProps) {
           </p>
           <div>
             <h1 className="t-display max-w-[13ch] sm:max-w-[16ch]">{title}</h1>
-            <p className="t-lead mt-6 max-w-[48ch]">{lead}</p>
+            <p className="t-lead mt-3 max-w-[48ch]">{lead}</p>
             {action ? (
               <div className="mt-8">
                 <QuoteChip href={action.href}>{action.label}</QuoteChip>

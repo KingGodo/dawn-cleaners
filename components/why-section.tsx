@@ -107,12 +107,21 @@ export function WhySection() {
               className="absolute inset-0 bg-gradient-to-t from-navy/80 via-navy/25 to-transparent"
             />
             <figcaption className="absolute inset-x-0 bottom-0 p-6">
-              <p className="max-w-[28ch] text-[15px] font-medium leading-snug tracking-[-0.02em] text-white">
+              <p className="max-w-[28ch] text-sm font-medium leading-snug tracking-[-0.02em] text-white">
                 “{quote.quote}”
               </p>
-              <p className="t-caption mt-3 text-white/60">
-                {quote.name} · {quote.context}
-              </p>
+              <div className="mt-4 flex items-center gap-3">
+                <Image
+                  src={quote.image}
+                  alt={quote.name}
+                  width={36}
+                  height={36}
+                  className="size-9 shrink-0 rounded-full object-cover ring-1 ring-white/25"
+                />
+                <p className="t-caption text-white/70">
+                  {quote.name}, {quote.context}
+                </p>
+              </div>
             </figcaption>
           </figure>
         </div>

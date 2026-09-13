@@ -102,17 +102,17 @@ export default function StyleGuidePage() {
               ))}
             </div>
             <div className="mt-10 space-y-2">
-              <p className="text-[17px] font-medium text-ink">Primary ink</p>
-              <p className="text-[17px] text-lead">Secondary lead</p>
-              <p className="text-[17px] text-slate">Muted slate</p>
-              <p className="text-[17px] text-faint">Faint index</p>
+              <p className="text-sm font-medium text-ink">Primary ink</p>
+              <p className="text-sm text-lead">Secondary lead</p>
+              <p className="text-sm text-slate">Muted slate</p>
+              <p className="text-sm text-faint">Faint index</p>
             </div>
           </Rule>
 
           <Rule id="type" title="Typography">
             <p className="t-caption mb-8 max-w-copy">
               Geist Sans. Tracking tightens as size grows. Display stays inside
-              42 to 84px.
+              24 to 38px. Body is 14px.
             </p>
             <div className="space-y-8">
               <Specimen label="Eyebrow">
