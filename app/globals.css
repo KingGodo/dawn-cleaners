@@ -55,6 +55,9 @@
   --ease-in-out-strong: var(--ease-in-out);
   --ease-apple: var(--ease-apple);
 
+  --animate-marquee-up: marquee-up var(--marquee-duration, 42s) linear infinite;
+  --animate-marquee-down: marquee-down var(--marquee-duration, 42s) linear infinite;
+
   --max-width-copy: 40rem;
   --max-width-content: 72rem;
   --max-width-wide: 80rem;
@@ -182,6 +185,7 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     font-optical-sizing: auto;
+    overflow-x: clip;
   }
 
   body {
@@ -222,12 +226,13 @@
 }
 
 @utility t-display {
-  font-size: clamp(2.625rem, 2rem + 3.4vw, 5.25rem);
+  font-size: clamp(2.125rem, 1.55rem + 3.2vw, 5.25rem);
   line-height: 1.04;
   font-weight: 600;
   letter-spacing: -0.03em;
   color: var(--text-primary);
   font-optical-sizing: auto;
+  overflow-wrap: break-word;
 }
 
 @utility t-h2 {
@@ -310,4 +315,30 @@
   letter-spacing: -0.05em;
   line-height: 0.82;
   font-optical-sizing: auto;
+}
+
+@keyframes marquee-up {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-50%);
+  }
+}
+
+@keyframes marquee-down {
+  from {
+    transform: translateY(-50%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-marquee-up,
+  .animate-marquee-down {
+    animation: none;
+    transform: none;
+  }
 }

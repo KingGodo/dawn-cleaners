@@ -13,7 +13,7 @@ export function IndustriesSection() {
   const current = industries[active]
 
   return (
-    <section id="industries" className="site-section">
+    <section id="industries" className="site-section scroll-mt-20">
       <Container width="frame">
         <Reveal>
           <SplitHeader

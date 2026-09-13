@@ -47,7 +47,14 @@ export function Navbar() {
       <Container width="frame" className="flex h-full items-center justify-between">
         <Logo inverted={overHero} />
 
-        <nav className="hidden items-center gap-8 lg:flex" aria-label="Primary">
+        <nav
+          className={cn(
+            "hidden items-center gap-5 xl:gap-7 lg:flex",
+            overHero &&
+              "rounded-full bg-navy/45 px-5 py-2 backdrop-blur-[20px] backdrop-saturate-150"
+          )}
+          aria-label="Primary"
+        >
           {site.nav.map((item) => (
             <Link
               key={item.href}
@@ -56,8 +63,7 @@ export function Navbar() {
                 "text-[13.5px] font-medium tracking-[-0.011em] transition-colors duration-[var(--duration-ui)] ease-[var(--ease-out)]",
                 overHero
                   ? "text-white/80 hover:text-white"
-                  : pathname === item.href ||
-                      (item.href.startsWith("/#") && pathname === "/")
+                  : pathname === item.href
                     ? "text-ink hover:text-ink"
                     : "text-lead hover:text-ink"
               )}
@@ -99,7 +105,10 @@ export function Navbar() {
             <motion.button
               type="button"
               aria-label="Dismiss menu"
-              className="fixed inset-0 top-14 z-40 bg-navy/20 lg:hidden"
+              className={cn(
+                "fixed inset-0 z-40 bg-navy/20 lg:hidden",
+                compact ? "top-14" : "top-16"
+              )}
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}

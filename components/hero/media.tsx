@@ -1,15 +1,11 @@
 import Image from "next/image"
+import { photos } from "@/lib/site"
 
-type HeroMediaProps = {
-  src: string
-  alt: string
-}
-
-export function HeroMedia({ src, alt }: HeroMediaProps) {
+export function HeroMedia() {
   return (
     <Image
-      src={src}
-      alt={alt}
+      src={photos.heroWide}
+      alt="A hotel room finished and made, ready for the next guest"
       fill
       priority
       sizes="100vw"

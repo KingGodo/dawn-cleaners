@@ -26,16 +26,18 @@ export function useHeroMotion(
         { scale: 1.08 },
         { scale: 1, duration: 1.5, ease: "power3.out" }
       )
-      gsap.to(media, {
-        yPercent: 8,
-        ease: "none",
-        scrollTrigger: {
-          trigger: section,
-          start: "top top",
-          end: "bottom top",
-          scrub: true,
-        },
-      })
+      if (!window.matchMedia("(max-width: 640px)").matches) {
+        gsap.to(media, {
+          yPercent: 8,
+          ease: "none",
+          scrollTrigger: {
+            trigger: section,
+            start: "top top",
+            end: "bottom top",
+            scrub: true,
+          },
+        })
+      }
     }, section)
 
     return () => context.revert()

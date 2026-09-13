@@ -25,14 +25,14 @@ export function HeroFrame({
   useHeroMotion(sectionRef, frameRef, mediaRef)
 
   return (
-    <section ref={sectionRef} className="relative -mt-16">
+    <section ref={sectionRef} className="relative z-0 -mt-16 isolate">
       <div
         ref={frameRef}
-        className="relative h-[100svh] min-h-[36rem] overflow-hidden bg-navy"
+        className="relative h-dvh min-h-[32rem] overflow-hidden bg-navy sm:min-h-[36rem]"
       >
         <div
           ref={mediaRef}
-          className="absolute inset-0 origin-center will-change-transform"
+          className="pointer-events-none absolute inset-0 origin-center will-change-transform"
         >
           {media}
         </div>

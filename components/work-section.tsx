@@ -9,7 +9,7 @@ export function WorkSection() {
   const [featured, ...rest] = work
 
   return (
-    <section id="work" className="site-section">
+    <section id="work" className="site-section scroll-mt-20">
       <Container width="frame">
         <Reveal>
           <SplitHeader

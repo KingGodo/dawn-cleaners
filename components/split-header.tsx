@@ -20,7 +20,7 @@ export function SplitHeader({
   return (
     <div
       className={cn(
-        "grid gap-8 lg:grid-cols-[minmax(0,0.78fr)_minmax(0,1.22fr)] lg:items-start lg:gap-16",
+        "grid gap-4 sm:gap-8 lg:grid-cols-[minmax(0,0.78fr)_minmax(0,1.22fr)] lg:items-start lg:gap-16",
         className
       )}
     >

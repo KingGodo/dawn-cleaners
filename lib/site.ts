@@ -19,9 +19,11 @@ export const site = {
   description:
     "Professional cleaning for homes, offices, BnBs, lodges and hotels. Reliable teams, hospitality grade finish, and bookings you don’t have to chase.",
   nav: [
+    { href: "/", label: "Home" },
     { href: "/services", label: "Services" },
     { href: "/#industries", label: "Industries" },
     { href: "/#work", label: "Work" },
+    { href: "/#testimonials", label: "Testimonials" },
     { href: "/about", label: "About" },
     { href: "/contact", label: "Contact" },
   ],
@@ -34,10 +36,27 @@ export const site = {
     hours: "Monday to Saturday, 7:00 to 18:00",
     region: "Homes, offices and hospitality properties across Zimbabwe",
   },
+  legal: [
+    { href: "/policy", label: "Policy" },
+    { href: "/privacy", label: "Privacy" },
+  ],
   social: [
-    { label: "WhatsApp", href: "https://wa.me/263778659908" },
-    { label: "Instagram", href: "https://instagram.com/dawncleaners" },
-    { label: "Facebook", href: "https://facebook.com/dawncleaners" },
+    {
+      label: "Facebook" as const,
+      href: "https://www.facebook.com/dawncleaners",
+    },
+    {
+      label: "Instagram" as const,
+      href: "https://www.instagram.com/dawncleaners",
+    },
+    {
+      label: "TikTok" as const,
+      href: "https://www.tiktok.com/@dawncleaners",
+    },
+    {
+      label: "WhatsApp" as const,
+      href: "https://wa.me/263778659908",
+    },
   ],
 } as const
 
@@ -262,6 +281,41 @@ export const testimonials = [
     name: "Amina Patel",
     role: "Homeowner",
     context: "Weekly residential",
+  },
+  {
+    quote:
+      "Guests mention the rooms before they mention the view. That is the standard we were after, and they hold it.",
+    name: "Chiedza Dube",
+    role: "Hotel supervisor",
+    context: "City hotel",
+  },
+  {
+    quote:
+      "We briefed them once. Every visit since has matched that first handover, including the bathrooms.",
+    name: "Farai Nyathi",
+    role: "Lodge owner",
+    context: "Weekend lodge",
+  },
+  {
+    quote:
+      "Same day resets used to be a scramble. Now the next guest walks into a room that already looks listed.",
+    name: "Lindiwe Sibanda",
+    role: "Host",
+    context: "Short stay apartment",
+  },
+  {
+    quote:
+      "The team is quiet, on time, and they leave the kitchen the way I wish I left it myself.",
+    name: "James Mutasa",
+    role: "Homeowner",
+    context: "Fortnightly home care",
+  },
+  {
+    quote:
+      "Our clients notice the office now. Floors, washrooms, the kitchen. We stopped sending reminder messages.",
+    name: "Netsai Khupe",
+    role: "Practice manager",
+    context: "Professional office",
   },
 ] as const
 

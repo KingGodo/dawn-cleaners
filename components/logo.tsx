@@ -1,5 +1,4 @@
 import Link from "next/link"
-import { LogoMark } from "@/components/logo-mark"
 import { cn } from "@/lib/utils"
 
 export function Logo({
@@ -20,7 +19,6 @@ export function Logo({
         className
       )}
     >
-      <LogoMark inverted={inverted} />
       <span
         className={cn(
           "inline-flex items-baseline gap-1.5 text-[15px] font-semibold tracking-[-0.02em]",
